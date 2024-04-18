@@ -23,7 +23,7 @@ class MultipleLinearRegression:
         y_pred = regressor.predict(X_test)
         mse = mean_squared_error(y_test, y_pred)
         r2 = r2_score(y_test, y_pred)
-        cross_validation_score = cross_val_score(estimator=regressor, X=X_train, y=y_train, cv=10, n_jobs=-1,
+        cross_validation_score = cross_val_score(estimator=regressor, X=X_train, y=y_train, cv=2, n_jobs=-1,
                                                  scoring='neg_mean_squared_error')
         return mse, r2, cross_validation_score.mean()
 

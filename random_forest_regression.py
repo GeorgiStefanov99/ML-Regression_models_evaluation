@@ -24,6 +24,6 @@ class RandomForestRegression:
         y_pred = tree.predict(X_test)
         r2 = r2_score(y_test, y_pred)
         mse = mean_squared_error(y_test, y_pred)
-        cross_validation_score = cross_val_score(estimator=tree, X=X_train, y=y_train, cv=10, n_jobs=-1,
+        cross_validation_score = cross_val_score(estimator=tree, X=X_train, y=y_train, cv=2, n_jobs=-1,
                                                  scoring='neg_mean_squared_error')
         return mse, r2, cross_validation_score.mean()
