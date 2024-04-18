@@ -84,4 +84,5 @@ def get_best_model():
     return trained_models[0]
 
 print(get_best_model())
+```
 This script trains and evaluates each regression model on the provided dataset and outputs the best performing model based on the cross-validation score. Adjust the dataset and configurations as needed for your specific regression tasks.
