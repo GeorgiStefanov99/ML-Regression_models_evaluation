@@ -14,8 +14,8 @@ classification_models = (dtc, mlr, pr, rfr, svm)
 
 def get_data():
     # Import dataset
-    dataset = pd.read_csv('Data.csv')
-    X = dataset.iloc[:, :-1].values
+    dataset = pd.read_csv('Position_Salaries.csv')
+    X = dataset.iloc[:, 1:-1].values
     y = dataset.iloc[:, -1].values
     # Split into training and test sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
